@@ -1,0 +1,268 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Arbaa Orange (Brand Gold replacements) */
+  --luxury-gold-50: #fff6f0;
+  --luxury-gold-100: #ffecd9;
+  --luxury-gold-200: #ffd0a8;
+  --luxury-gold-300: #ffa86b;
+  --luxury-gold-400: #f6914c;
+  --luxury-gold-500: #e77d2f; /* Company primary orange */
+  --luxury-gold-600: #cd6218;
+  --luxury-gold-700: #a74912;
+  --luxury-gold-800: #853711;
+  --luxury-gold-900: #6e2d12;
+  --luxury-gold-950: #3b1406;
+
+  /* Arbaa Deep Blue (Brand Dark slate replacements) */
+  --luxury-dark-50: #f0f4f9;
+  --luxury-dark-100: #dbe3ec;
+  --luxury-dark-200: #a2b5cd;
+  --luxury-dark-300: #6b81a1;
+  --luxury-dark-400: #4e6484;
+  --luxury-dark-500: #3b506c;
+  --luxury-dark-600: #2b3d56;
+  --luxury-dark-700: #1e2c3f;
+  --luxury-dark-800: #141f2e; /* Card border */
+  --luxury-dark-900: #0c1524; /* Card background */
+  --luxury-dark-950: #060b13; /* Core background */
+
+  /* Arbaa Light Blue / Cyan Accents */
+  --arbaa-cyan-50: #f2f8fa;
+  --arbaa-cyan-100: #e0eff5;
+  --arbaa-cyan-200: #c6e0eb;
+  --arbaa-cyan-300: #9fcad9;
+  --arbaa-cyan-400: #92c3d7; /* Company light blue/cyan */
+  --arbaa-cyan-500: #1076a6;
+  --arbaa-cyan-600: #04598f;
+  --arbaa-cyan-700: #19426d;
+  --arbaa-cyan-800: #143354;
+  --arbaa-cyan-900: #14283f;
+  --arbaa-cyan-950: #0c1725;
+
+  /* Glassmorphism defaults */
+  --glass-card-bg: rgba(12, 21, 36, 0.75);
+  --glass-card-border: rgba(146, 195, 215, 0.15);
+  --skeleton-start: #0c1524;
+  --skeleton-middle: #141f2e;
+}
+
+:root.light {
+  /* Dynamic Slate mapping for clean light theme */
+  --luxury-dark-950: #f8fafc; /* Core light canvas bg */
+  --luxury-dark-900: #ffffff; /* Card/Modal/Drawer white bg */
+  --luxury-dark-800: #e2e8f0; /* Soft borders and dividers */
+  --luxury-dark-700: #cbd5e1;
+  --luxury-dark-600: #94a3b8;
+  --luxury-dark-500: #64748b; /* Placeholders/Subtext */
+  --luxury-dark-400: #475569;
+  --luxury-dark-300: #334155; /* Labels */
+  --luxury-dark-200: #1e293b;
+  --luxury-dark-100: #0f172a;
+  --luxury-dark-50: #0f172a;  /* Core text color (Dark Slate) */
+
+  /* Readability overrides for blue brand colors on white background */
+  --arbaa-cyan-50: #f0f9ff;
+  --arbaa-cyan-100: #e0f2fe;
+  --arbaa-cyan-200: #bae6fd;
+  --arbaa-cyan-300: #7dd3fc;
+  --arbaa-cyan-400: #1076a6; /* Increased contrast for text highlights */
+  --arbaa-cyan-500: #04598f;
+  --arbaa-cyan-600: #0369a1;
+  --arbaa-cyan-700: #075985;
+  --arbaa-cyan-800: #0c4a6e;
+  --arbaa-cyan-900: #0a3a5c;
+  --arbaa-cyan-950: #082f49;
+
+  /* Glassmorphism light overrides */
+  --glass-card-bg: rgba(255, 255, 255, 0.85);
+  --glass-card-border: rgba(16, 118, 166, 0.1);
+  --skeleton-start: #f1f5f9;
+  --skeleton-middle: #e2e8f0;
+}
+
+@theme {
+  /* Arbaa Orange (Brand Gold replacements) */
+  --color-luxury-gold-50: var(--luxury-gold-50);
+  --color-luxury-gold-100: var(--luxury-gold-100);
+  --color-luxury-gold-200: var(--luxury-gold-200);
+  --color-luxury-gold-300: var(--luxury-gold-300);
+  --color-luxury-gold-400: var(--luxury-gold-400);
+  --color-luxury-gold-500: var(--luxury-gold-500);
+  --color-luxury-gold-600: var(--luxury-gold-600);
+  --color-luxury-gold-700: var(--luxury-gold-700);
+  --color-luxury-gold-800: var(--luxury-gold-800);
+  --color-luxury-gold-900: var(--luxury-gold-900);
+  --color-luxury-gold-950: var(--luxury-gold-950);
+
+  /* Arbaa Deep Blue (Brand Dark slate replacements) */
+  --color-luxury-dark-50: var(--luxury-dark-50);
+  --color-luxury-dark-100: var(--luxury-dark-100);
+  --color-luxury-dark-200: var(--luxury-dark-200);
+  --color-luxury-dark-300: var(--luxury-dark-300);
+  --color-luxury-dark-400: var(--luxury-dark-400);
+  --color-luxury-dark-500: var(--luxury-dark-500);
+  --color-luxury-dark-600: var(--luxury-dark-600);
+  --color-luxury-dark-700: var(--luxury-dark-700);
+  --color-luxury-dark-800: var(--luxury-dark-800);
+  --color-luxury-dark-900: var(--luxury-dark-900);
+  --color-luxury-dark-950: var(--luxury-dark-950);
+
+  /* Arbaa Light Blue / Cyan Accents */
+  --color-arbaa-cyan-50: var(--arbaa-cyan-50);
+  --color-arbaa-cyan-100: var(--arbaa-cyan-100);
+  --color-arbaa-cyan-200: var(--arbaa-cyan-200);
+  --color-arbaa-cyan-300: var(--arbaa-cyan-300);
+  --color-arbaa-cyan-400: var(--arbaa-cyan-400);
+  --color-arbaa-cyan-500: var(--arbaa-cyan-500);
+  --color-arbaa-cyan-600: var(--arbaa-cyan-600);
+  --color-arbaa-cyan-700: var(--arbaa-cyan-700);
+  --color-arbaa-cyan-800: var(--arbaa-cyan-800);
+  --color-arbaa-cyan-900: var(--arbaa-cyan-900);
+  --color-arbaa-cyan-950: var(--arbaa-cyan-950);
+
+  /* Font styling */
+  --font-cairo: "Cairo", sans-serif;
+}
+
+@utility glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-card-border);
+}
+
+@utility glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    border-color: rgba(231, 125, 47, 0.35); /* Brand Orange hover highlight */
+    box-shadow: 0 10px 30px -10px rgba(231, 125, 47, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+@utility text-gold-gradient {
+  background: linear-gradient(135deg, #ffd0a8 0%, #e77d2f 50%, #cd6218 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility bg-gold-gradient {
+  background: linear-gradient(135deg, #f6914c 0%, #e77d2f 50%, #cd6218 100%);
+}
+
+@utility bg-dark-gradient {
+  background: linear-gradient(180deg, var(--color-luxury-dark-900) 0%, var(--color-luxury-dark-950) 100%);
+}
+
+@utility fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@utility slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-start) 25%,
+    var(--skeleton-middle) 37%,
+    var(--skeleton-start) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+body {
+  background-color: var(--color-luxury-dark-950);
+  color: var(--color-luxury-dark-50);
+  font-family: var(--font-cairo);
+  -webkit-font-smoothing: antialiased;
+  direction: rtl;
+}
+
+/* Custom Scrollbar for Sleek Dark Look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-luxury-dark-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-luxury-dark-800);
+  border-radius: 9999px;
+  border: 1px solid var(--color-luxury-dark-900);
+  transition: background-color 0.3s;
+  &:hover {
+    background: var(--color-luxury-gold-500); /* Brand Orange hover scroll */
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Form inputs styling */
+input, select, textarea {
+  background-color: var(--color-luxury-dark-900);
+  border: 1px solid var(--color-luxury-dark-800);
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  color: var(--color-luxury-dark-50);
+  transition: all 0.2s;
+  &::placeholder {
+    color: var(--color-luxury-dark-400);
+  }
+  &:focus {
+    outline: none;
+    border-color: var(--color-arbaa-cyan-400); /* Cyan focus ring */
+    box-shadow: 0 0 0 1px var(--color-arbaa-cyan-400);
+  }
+}
+
+label {
+  font-size: 0.875rem;
+  color: var(--color-luxury-dark-300);
+  font-weight: 500;
+}
+
+button {
+  transition: transform 0.1s;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Custom Stepper Input Styling */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Ensure padding-left so that text doesn't overlap the custom stepper buttons in RTL */
+input.custom-stepper-input {
+  padding-left: 2.25rem !important;
+}
